@@ -1,0 +1,127 @@
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Increased opacity for better visibility */
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Added high z-index to ensure it stays on top */
+}
+
+.modalContainer {
+  width: 500px;
+  min-height: 200px; /* Changed to min-height for better content fit */
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: relative; /* Added for proper stacking */
+  z-index: 10000; /* Higher than background */
+}
+
+/* Removed duplicate .modalContainer selector */
+.title {
+  display: block; /* Changed from inline-block for better centering */
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem; /* Increased from 1px */
+  cursor: pointer;
+  padding: 0;
+}
+
+.modalContainer .body {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem; /* Reduced from 1.7rem */
+  text-align: center;
+  flex-direction: column; /* Added for better input layout */
+  gap: 15px; /* Added spacing between elements */
+}
+
+.modalContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Added spacing */
+}
+
+.modalContainer .footer button {
+  width: 100px;
+  height: 35px;
+  margin: 10px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s; /* Added smooth transition */
+}
+
+.modalContainer .footer button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+#cancelBtn {
+  background-color: crimson;
+}
+
+.address {
+  display: block;
+  margin: 0 auto; /* Improved centering */
+  height: 40px; /* Increased height */
+  width: 100%;
+  max-width: 330px;
+  padding: 0 15px; /* Added padding */
+  text-align: left; /* Changed from center */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  background-color: #f0f8ff; /* Lighter than lightblue */
+  outline: 2px solid cornflowerblue;
+  border-color: transparent;
+}
+
+/* Added for select dropdown */
+#selectNumber {
+  width: 100%;
+  max-width: 330px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin: 10px auto;
+}
+
+/* Added for error message */
+.error-message {
+  color: crimson;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-align: center;
+}
